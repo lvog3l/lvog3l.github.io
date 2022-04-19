@@ -196,7 +196,7 @@ function addLife(){
 }
 
 function resetGridView(){
-  surface.style.setProperty('--cell-size', 9 + "px");
+  surface.style.setProperty('--cell-size', 7 + "px");
   surface.style.setProperty('--x-offset', 0 + "px");
   surface.style.setProperty('--y-offset', 0 + "px");
 }

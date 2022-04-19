@@ -12,7 +12,7 @@
   --grid-rows: 1;
   --x-offset: 0px;
   --y-offset: 0px;
-  --cell-size:9px;
+  --cell-size: 7px;
 }
 
 *{
@@ -29,7 +29,7 @@ body {
 .nav {
   grid-column: 1/2;
   border-radius: 25px;
-  margin-top: 40px;
+  margin-top: 2.5vh;
   margin-right: 25px;
   margin-left: 40px;
   background-color: var(--color-menus);
@@ -123,7 +123,7 @@ p {
   display: grid;
   grid-row-gap: 20px;
   border-radius: 25px;
-  margin-top: 40px;
+  margin-top: 2.5vh;
   margin-left: 20px;
   margin-right: 40px;
   height: 95vh;
@@ -210,7 +210,7 @@ HANGMAN
   box-shadow: 2px 2px 4px var(--color-gray5), -2px -2px 4px var(--color-gray4);
   aspect-ratio: 1/1.25;
   min-block-size: 450px;
-  max-block-size: 1100px;
+  max-block-size: 800px;
   display: grid;
   grid-template-rows: 5fr 0.5fr minmax(100px, 2fr);
   row-gap: 10px;
@@ -255,10 +255,10 @@ HANGMAN
 
 .middle-panel{
   grid-row: 2/3;
-  margin: 0 50px;
+  margin: 0 25px;
   display: grid;
   grid-template-columns: 4fr 1fr;
-  grid-gap: 40px;
+  grid-gap: 20px;
 }
 
 .puzzle-word{
@@ -269,7 +269,7 @@ HANGMAN
   display: block;
   vertical-align: bottom;
   text-align: center;
-  font-size: 42px;
+  font-size: 32px;
   font-family: monospace;
   box-shadow: inset 2px 2px 4px var(--color-gray5), inset -2px -2px 4px var(--color-gray3);
 }
@@ -281,7 +281,7 @@ HANGMAN
   border-radius: var(--radius2);
   align-items: center;
   justify-content: center;
-  font-size: 18px;
+  font-size: 14px;
   color: black;
   font-weight: bold;
   box-shadow: 2px 2px 4px var(--color-gray5), -2px -2px 4px var(--color-gray4);
@@ -299,7 +299,7 @@ HANGMAN
 .keyboard{
   grid-row: 3/4;
   font-family: monospace;
-  font-weight: 800;
+  font-weight: bolder;
   color: black;
   text-transform: uppercase;
   font-size: 24px;
@@ -350,12 +350,12 @@ MASTERMIND
   background-image: url("/img/walnut.jpg");
   background-size: cover;
   box-shadow: 5px 5px 15px #100C07FF;
-  min-width: 350px;
-  max-width: 550px;
+  min-width: 300px;
+  max-width: 350px;
   display: grid;
   grid-template-rows: repeat(12, minmax(50px, .75fr));
-  row-gap: 10px;
-  padding: 10px;
+  row-gap: 5px;
+  padding: 5px;
   overflow: hidden;
   margin: auto;
 }
@@ -368,7 +368,7 @@ MASTERMIND
   padding: 1%;
   display: grid;
   align-content: center;
-  grid-template-columns: 1fr 5fr;
+  grid-template-columns: 1fr 4fr;
 }
 
 .peg-row{
@@ -379,7 +379,7 @@ MASTERMIND
   padding: 1%;
   display: grid;
   align-content: center;
-  grid-template-columns: 1fr 5fr;
+  /**/grid-template-columns: 1fr 5fr;
 }
 
 .disabled{
@@ -439,10 +439,10 @@ MASTERMIND
   grid-column: 1/2;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 5%;
+  grid-gap: 10%;
   align-content: center;
   margin-left: 2%;
-  padding: 10%;
+  padding: 15%;
 }
 
 .guess{
@@ -461,7 +461,7 @@ MASTERMIND
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   overflow: hidden;
-  padding: 5%;
+  padding: 3%;
   align-content: center;
 }
 
@@ -488,7 +488,7 @@ MASTERMIND
 .peg {
   box-shadow: inset 2px 2px 1px var(--color-gray5), inset -1px -1px px var(--color-gray3);
   border-radius: 50%;
-  padding: 50%;
+  padding: 45%;
   border: 2px solid black;
   background-color : rgba(0, 0, 0, 0.15);
 }
@@ -496,7 +496,7 @@ MASTERMIND
 .submit{
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-column-gap: 75px;
+  grid-column-gap: 25px;
   box-shadow: inset 2px 2px 4px #312416, inset -2px -2px 4px #a58a6a;
   border-radius: 2rem;
   border: 1px solid #7f4343;
@@ -620,7 +620,7 @@ GAME OF LIFE
 
 .game-grid{
   display: none;
-  width: 1000px;
+  width: 800px;
   margin: 100px auto auto;
 }
 
@@ -655,7 +655,7 @@ GAME OF LIFE
   color: #818bc5;
   text-align: center;
   padding: 10px;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .button {

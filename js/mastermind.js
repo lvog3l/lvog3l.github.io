@@ -68,12 +68,12 @@ function generateCode(){
   for(let i = 0; i < 4; i++){
     secretCode[i] = colors[Math.floor(Math.random()*5)]; // select one of the 6 colors
   }
-  console.log("secred code: " + secretCode);
+  console.log("secret code: " + secretCode);
 }
 
 function pegDrag(e){
   this.style.opacity = "0.999";
-  this.style.boxShadow = "inset 2px 2px 6px var(--clr-gray300), inset -2px -2px 6px var(--clr-gray500)";
+  this.style.boxShadow = "inset 2px 2px 6px var(--color-gray3), inset -2px -2px 6px var(--color-gray6)";
   console.log("pegDrag" + this.getAttribute("id"));
   e.dataTransfer.setData("text/plain", this.getAttribute("id"));
   console.log("id" + this.style.getPropertyValue( "id"));
@@ -88,7 +88,7 @@ function pegDragEnd(e) {
   e.preventDefault();
   let data = e.dataTransfer.getData("text");
   let target = e.target;
-  target.style.boxShadow = "inset 2px 2px 6px var(--clr-gray500), inset -2px -2px 6px var(--clr-gray300)";
+  target.style.boxShadow = "inset 2px 2px 6px var(--color-gray6), inset -2px -2px 6px var(--color-gray3)";
   let elem = target.parentNode
   console.log("target id " + target.id);
   switch (target.id) {
