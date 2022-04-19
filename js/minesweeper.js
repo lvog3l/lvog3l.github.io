@@ -17,7 +17,7 @@ function makeRows(rows, cols) {
     let tempArray = [];
     for(let cl = 0; cl < cols; cl++){
       let t = Math.floor(Math.random()*100);
-      if(t < 80) {
+      if(t < 85) {
         tempArray[cl] = '+';
       }else{
         tempArray[cl] = 'b'
@@ -32,7 +32,8 @@ function makeRows(rows, cols) {
     cell.innerText = "+"
     outerCell.id = c.toString();
     cell.style.cursor = "pointer";
-    outerCell.addEventListener("click", initialBombCheck)
+    outerCell.addEventListener("click", initialBombCheck);
+    outerCell.addEventListener("contextmenu", toggleFlag, false);
     outerCell.appendChild(cell).className = "outer-cell";
     board.appendChild(outerCell).className = "grid-item";
     //outerCell.classList.remove("no-shadow");
@@ -50,6 +51,24 @@ function markCell(r, c, f) {
   if(f > 0){
     cell.innerText = f.toString();
   }
+}
+
+function toggleFlag (e){
+  if(this.classList.contains("flag")){
+    //remove flag and add back + or flag count if not a bomb
+    this.classList.remove("flag");
+    let c = this.id % numCols;
+    let r = Math.floor(this.id / numRows);
+    let contents = gameArray[r][c];
+    if(contents !== 'b'){
+      this.innerText = contents.toString();
+    }
+    console.log(contents);
+  }else{
+    this.classList.add("flag");
+    this.innerText = "";
+  }
+  e.preventDefault();
 }
 
 function initialBombCheck() {

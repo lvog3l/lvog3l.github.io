@@ -611,6 +611,12 @@ MINESWEEPER
   background-size: contain;
 }
 
+.flag{
+  background-image: url(/img/flag.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
 
 /*
 =-=-=-=-=-=-=-==-=-=-=-=-=-=-==-=-=-=-=-=-=-==-=-=-=-=-=-=-=
